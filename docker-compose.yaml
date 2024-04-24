@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+  db:
+    image: postgres
+    environment:
+      POSTGRES_DB: novadrive  
+      POSTGRES_USER: etlreadonly  
+      POSTGRES_PASSWORD: novadrive376A@  
+    ports:
+      - "5432:5432"  
+    volumes:
+      - postgres_data:/var/lib/postgresql/data  
+
+networks:
+  mynetwork:
+
+volumes:
+  postgres_data:  
